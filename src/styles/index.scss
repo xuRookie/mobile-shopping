@@ -1,0 +1,80 @@
+@import './variables';
+
+// 样式初始化
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+ul, ol { list-style:none; } 
+a { text-decoration:none; } 
+a:hover { text-decoration: none; }
+
+
+#root {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@each $name, $color in $color-list {
+  .text-#{$name} {
+    color: $color;
+  }
+  .bg-#{$name} {
+      background-color: $color;
+  }
+  .bg-#{$name}-light {
+      background-color: lighten($color, 15%);
+  }
+  .bg-#{$name}-lighter {
+      background-color: lighten($color, 25%);
+  }
+  .bg-#{$name}-lightest {
+      background-color: lighten($color, 35%);
+  }
+  .bg-#{$name}-dark {
+      background-color: darken($color, 15%);
+  }
+  .bg-#{$name}-darker {
+      background-color: darken($color, 25%);
+  }
+  .bg-#{$name}-darkest {
+      background-color: darken($color, 35%);
+  }
+}
+
+// space
+@each $dKey, $dValue in $directions {
+  @each $spaceKey, $spaceValue in $spaces {
+    .m#{$dKey}-#{$spaceKey} {
+      margin-#{$dValue}: $spaceValue;
+    }
+    .p#{$dKey}-#{$spaceKey} {
+      padding-#{$dValue}: $spaceValue;
+    }
+  }
+}
+
+@each $spaceKey, $spaceValue in $spaces {
+  // 左右
+  .mx-#{$spaceKey} {
+    margin: 0 $spaceValue;
+  }
+  .px-#{$spaceKey} {
+    padding: 0 $spaceValue;
+  }
+  // 上下
+  .my-#{$spaceKey} {
+    margin: $spaceValue 0;
+  }
+  .py-#{$spaceKey} {
+    padding: $spaceValue 0;
+  }
+
+  .m#{$spaceKey} {
+    margin: $spaceValue;
+  }
+  .p#{$spaceKey} {
+    padding: $spaceValue;
+  }
+}

@@ -1,0 +1,38 @@
+$primary: #2f6fd4;
+$gray: #999;
+$brown: #a67868;
+$red: #ff291f;
+$orange: #ff9502;
+$yellow: #ffe60d;
+$green: #4bda64;
+$teal: #19e1cd;
+$blue: #037aff;
+$indigo: #5e6fc7;
+$purple: #af2ec6;
+$pink: #ff2f69;
+
+$color-list: (
+  'primary': $primary,
+  'gray':$gray,
+  'brown':$brown,
+  'red':$red,
+  'orange':$orange,
+  'yellow':$yellow,
+  'green':$green,
+  'teal':$teal,
+  'blue':$blue,
+  'indigo':$indigo,
+  'purple':$purple,
+  'pink':$pink
+);
+
+$spaces: (
+  '5': 5px,
+  '10': 10px,
+  '12': 12px,
+  '15': 15px,
+  '16': 16px,
+  '20': 20px
+);
+
+$directions: (t:top, r:right, b:bottom, l:left);
